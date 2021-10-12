@@ -13,7 +13,7 @@ app.set('port', 65534);
 app.set('view engine', 'ejs');
 
 app.get('/', function(req,res,next){
-    res.render('httpTest.html');
+    res.render('httpTest');
 
 })
 
