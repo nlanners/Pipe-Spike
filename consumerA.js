@@ -13,8 +13,10 @@ app.set('port', 65535);
 app.set('view engine', 'ejs');
 
 app.get('/', function(req,res,next){
-    var context = {'message':'A message from CS361'};
-    res.send(context);
+    var response = {};
+    response.message = 'A message from CS361.';
+    response.header = {'Access-Control-Allow-Origin': '*'};
+    res.send(response);
 
 })
 
