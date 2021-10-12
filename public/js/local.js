@@ -4,7 +4,7 @@ function bindButtons() {
     document.getElementById('requestSubmit').addEventListener('click', function(event){
         var req = new XMLHttpRequest();
 
-        req.open('POST', 'flip3.engr.oregonstate.edu:65535', true);
+        req.open('GET', 'flip3.engr.oregonstate.edu:65535', true);
         req.addEventListener('load', function(){
             if(req.status >= 200 && req.status < 400) {
                 var response = JSON.parse(req.responseText);

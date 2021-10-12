@@ -12,7 +12,7 @@ app.use(ejs);
 app.set('port', 65535);
 app.set('view engine', 'ejs');
 
-app.post('/', function(req,res,next){
+app.get('/', function(req,res,next){
     var context = {'message':'A message from CS361'};
     res.send(context);
 
