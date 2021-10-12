@@ -15,7 +15,6 @@ app.set('view engine', 'ejs');
 app.get('/', function(req,res,next){
     var response = {};
     response.message = 'A message from CS361.';
-    response.header = {'Access-Control-Allow-Origin': '*'};
     res.send(response);
 
 })

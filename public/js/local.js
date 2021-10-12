@@ -5,6 +5,7 @@ function bindButtons() {
         var req = new XMLHttpRequest();
 
         req.open('GET', 'flip3.engr.oregonstate.edu:65535', true);
+        req.setRequestHeader('Access-Control-Allow-Origin', '*');
         req.addEventListener('load', function(){
             if(req.status >= 200 && req.status < 400) {
                 var response = JSON.parse(req.responseText);
