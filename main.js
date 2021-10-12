@@ -9,12 +9,11 @@ app.use(bodyParser.json({extended:false}));
 app.use(express.static('public'));
 app.use(ejs);
 
-app.set('port', 65535);
+app.set('port', 65534);
 app.set('view engine', 'ejs');
 
-app.post('/', function(req,res,next){
-    var context = {'message':'A message from CS361'};
-    res.send(context);
+app.get('/', function(req,res,next){
+    res.render('httpTest.html');
 
 })
 
